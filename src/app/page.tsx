@@ -721,12 +721,6 @@ export default function Home() {
               <DollarSign className="w-5 h-5 text-amber-400" />
               <span className="font-bold tracking-wider uppercase text-amber-400">Волк с Уолл-стрит</span>
             </div>
-            <p className="text-zinc-500 text-sm text-center">
-              Paramount Pictures, 2013. Режиссёр — Мартин Скорсезе. Все права защищены.
-            </p>
-            <p className="text-zinc-600 text-xs">
-              Фан-сайт · Неофициальный проект
-            </p>
           </div>
         </div>
       </footer>

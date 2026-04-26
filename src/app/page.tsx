@@ -22,6 +22,11 @@ import {
   X,
 } from 'lucide-react'
 
+/* ───── basePath для GitHub Pages ───── */
+// Пустая строка для локальной разработки, /The-Wolf-of-Wall-Street для GitHub Pages
+// Next.js автоматически подставляет basePath для Link/Image, но для <img> и style — нужно вручную
+const BASE = process.env.NODE_ENV === 'production' ? '/The-Wolf-of-Wall-Street' : ''
+
 /* ───── data ───── */
 const cast = [
   {
@@ -221,7 +226,7 @@ export default function Home() {
         <motion.div style={{ y: heroY }} className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center scale-110"
-            style={{ backgroundImage: "url('/hero-bg.png')" }}
+            style={{ backgroundImage: `url('${BASE}/hero-bg.png')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/80 to-transparent" />
@@ -422,7 +427,7 @@ export default function Home() {
                 <Card className="bg-zinc-900/50 border-amber-900/20 hover:border-amber-500/40 transition-all duration-300 group overflow-hidden">
                   <div className="relative h-72 overflow-hidden">
                     <img
-                      src={actor.img}
+                      src={`${BASE}${actor.img}`}
                       alt={actor.name}
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
@@ -444,7 +449,7 @@ export default function Home() {
       <section id="quotes" className="relative py-24 sm:py-32">
         {/* Decorative background */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 text-[20rem] font-black text-amber-400 select-none leading-none">"</div>
+          <div className="absolute top-20 left-10 text-[20rem] font-black text-amber-400 select-none leading-none">&quot;</div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -481,7 +486,7 @@ export default function Home() {
               >
                 <Quote className="w-10 h-10 text-amber-400/30 mb-6" />
                 <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-light text-zinc-200 leading-relaxed max-w-4xl italic">
-                  «{q.text}»
+                  &laquo;{q.text}&raquo;
                 </blockquote>
                 <Separator className="w-16 bg-amber-500/30 my-6" />
                 <cite className="text-amber-400 font-medium not-italic text-lg">— {q.author}</cite>
@@ -538,7 +543,7 @@ export default function Home() {
                 className="group relative overflow-hidden rounded-xl"
               >
                 <img
-                  src={item.src}
+                  src={`${BASE}${item.src}`}
                   alt={item.alt}
                   className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -655,7 +660,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: "url('/scene-trading.png')" }}
+            style={{ backgroundImage: `url('${BASE}/scene-trading.png')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/90 to-[#0a0a0a]" />
         </div>

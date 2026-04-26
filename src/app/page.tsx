@@ -682,13 +682,19 @@ export default function Home() {
               разрушает всё: семью, дружбу, достоинство. И о том, как легко потерять себя, когда
               деньги становятся единственным мерилом успеха.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <div className="mt-10 flex flex-wrap gap-4 justify-center">\
+            <a
+              href="https://www.youtube.com/watch?v=iszwuX1AK6A"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 size="lg"
                 className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 tracking-wide"
               >
                 <Play className="w-5 h-5 mr-2" /> Смотреть трейлер
               </Button>
+            </a>
               <Button
                 size="lg"
                 variant="outline"

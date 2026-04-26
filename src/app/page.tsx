@@ -682,7 +682,7 @@ export default function Home() {
               разрушает всё: семью, дружбу, достоинство. И о том, как легко потерять себя, когда
               деньги становятся единственным мерилом успеха.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">\
+            <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <a
               href="https://www.youtube.com/watch?v=iszwuX1AK6A"
               target="_blank"
@@ -695,6 +695,11 @@ export default function Home() {
                 <Play className="w-5 h-5 mr-2" /> Смотреть трейлер
               </Button>
             </a>
+            <a
+              href="https://www.imdb.com/title/tt0993846/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 size="lg"
                 variant="outline"
@@ -702,6 +707,7 @@ export default function Home() {
               >
                 <Star className="w-5 h-5 mr-2" /> IMDb 8.2
               </Button>
+            </a>
             </div>
           </motion.div>
         </div>
